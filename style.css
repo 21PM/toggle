@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+}
+input{
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    
+}
+#toggle{
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: black;
+}
+#container input{
+    display: none;
+}
+div label{
+    position: relative;
+    display: block;
+    width: 100px;
+    height:50px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+div label:before{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    content: "";
+    display: block;
+    width: 40px;
+    height: 40px;
+    background:#8a2f2f;
+    border-radius: 50%;
+}
+div input:checked + label{
+    background:#ffffff;
+}
+div input:checked + label::before{
+    background:#652c2c;
+    left: 55px;
+}
